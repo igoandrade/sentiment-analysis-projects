@@ -1,7 +1,6 @@
 FROM gitpod/workspace-full:latest
 
-USER root
-RUN sudo su
+USER gitpod
 
 # Install python packages
 RUN python -m pip install --upgrade pip
