@@ -5,7 +5,7 @@ RUN apt-get update
 
 # Install python packages
 RUN python -m pip install --upgrade pip
-COPY requirements.txt ./
+COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
 # Install R
@@ -34,3 +34,4 @@ RUN Rscript -e "install.packages('scales')"
 RUN Rscript -e "install.packages('timetk')"
 RUN Rscript -e "install.packages('tibbletime')"
 RUN Rscript -e "install.packages('PerformanceAnalytics')"
+RUN Rscript -e "install.packages('moments')"
