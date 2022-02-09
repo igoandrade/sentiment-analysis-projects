@@ -35,4 +35,4 @@ RUN Rscript -e "install.packages('tibbletime')"
 RUN Rscript -e "install.packages('PerformanceAnalytics')"
 RUN Rscript -e "install.packages('moments')"
 
-RUN pip install rpy2
+RUN pip install rpy2 wordcloud
