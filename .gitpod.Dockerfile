@@ -2,7 +2,7 @@ FROM gitpod/workspace-full:latest
 
 # Install python packages
 RUN python3 -m pip install --upgrade pip
-RUN python3 -m pip install -r https://github.com/igoandrade/sentiment-analysis-projects/raw/main/requirements.txt
+RUN python3 -m pip install -r https://github.com/igoandrade/sentiment-analysis-projects/raw/main/requirements.txt --user # Remenber to replacce by your requirements.txt link
 
 USER root
 
