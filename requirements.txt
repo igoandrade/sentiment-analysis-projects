@@ -12,7 +12,6 @@ graphviz
 ipykernel
 jupyterlab
 radian
-rpy2
 nltk
 textblob
 wordcloud
