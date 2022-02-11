@@ -1,10 +1,10 @@
 FROM gitpod/workspace-full:latest
 
-# Install python packages
-RUN python3 -m pip install --upgrade pip
-RUN python3 -m pip install -r https://github.com/igoandrade/sentiment-analysis-projects/raw/main/requirements.txt --user # Remenber to replacce by your requirements.txt link
-
 USER root
+
+# Install python packages
+RUN pip install --upgrade pip
+RUN pip install -r https://github.com/igoandrade/sentiment-analysis-projects/raw/main/requirements.txt --user # Remenber to replace by your requirements.txt link
 
 # Install R
 RUN apt-get update && apt-get install -y libcurl4-openssl-dev libssl-dev libxml2-dev pandoc texlive texlive-latex-extra tcl r-base r-base-dev
