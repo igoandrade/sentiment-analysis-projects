@@ -3,8 +3,8 @@ FROM gitpod/workspace-full:latest
 USER root
 
 # Install python packages
-RUN pip install --upgrade pip --user
-RUN pip install -r https://github.com/igoandrade/sentiment-analysis-projects/raw/main/requirements.txt --user # Remenber to replace by your requirements.txt link
+RUN pyenv exec pip install --upgrade pip --user
+RUN pyenv exec pip install -r https://github.com/igoandrade/sentiment-analysis-projects/raw/main/requirements.txt --user # Remenber to replace by your requirements.txt link
 
 # Install R
 RUN apt-get update && apt-get install -y libcurl4-openssl-dev libssl-dev libxml2-dev pandoc texlive texlive-latex-extra tcl r-base r-base-dev
