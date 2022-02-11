@@ -18,3 +18,4 @@ wordcloud
 urllib3
 beautifulsoup4
 pygooglenews
+vaderSentment
