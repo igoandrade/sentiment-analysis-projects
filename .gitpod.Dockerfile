@@ -1,13 +1,14 @@
 FROM gitpod/workspace-full:latest
 
 USER root
+RUN apt-get update
 
 # Install python packages
 RUN pyenv exec pip install --upgrade pip --user
 RUN pyenv exec pip install -r https://github.com/igoandrade/sentiment-analysis-projects/raw/main/requirements.txt --user # Remenber to replace by your requirements.txt link
 
 # Install R
-RUN apt-get update && apt-get install -y libcurl4-openssl-dev libssl-dev libxml2-dev pandoc texlive texlive-latex-extra tcl r-base r-base-dev
+RUN apt-get install -y libcurl4-openssl-dev libssl-dev libxml2-dev pandoc texlive texlive-latex-extra tcl r-base r-base-dev
 RUN echo "r <- getOption('repos'); r['CRAN'] <- 'http://cran.us.r-project.org'; options(repos = r);" > ~/.Rprofile
 RUN Rscript -e "install.packages('languageserver')"
 RUN Rscript -e "install.packages('caret')"
