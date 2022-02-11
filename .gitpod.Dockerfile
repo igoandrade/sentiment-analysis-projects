@@ -4,8 +4,8 @@ USER root
 RUN apt-get update
 
 # Install python packages
-RUN sudo pyenv exec pip install --upgrade pip
-RUN sudo pyenv exec pip install -r https://github.com/igoandrade/sentiment-analysis-projects/raw/main/requirements.txt # Remenber to replace by your requirements.txt link
+RUN pip install --upgrade pip
+RUN pip install -r https://github.com/igoandrade/sentiment-analysis-projects/raw/main/requirements.txt # Remenber to replace by your requirements.txt link
 
 # Install R
 RUN apt-get install -y libcurl4-openssl-dev libssl-dev libxml2-dev pandoc texlive texlive-latex-extra tcl r-base r-base-dev
